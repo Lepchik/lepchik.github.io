@@ -1,3 +1,42 @@
+@media (max-width: 480px) {
+    /* Result Bars Container */
+    #resultBarsContainer {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Individual Result Bar */
+    .result-bar {
+        height: 30px; /* Increase height for better visibility */
+        margin-bottom: 15px;
+        min-width: 60px; /* Ensure text is visible on smaller screens */
+        font-size: 12px; /* Adjust font size for readability */
+    }
+
+    /* Reward Container */
+    .reward-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-reward {
+        max-width: 200px;
+        margin: 0 auto 20px auto;
+    }
+
+    .similar-rewards-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .similar-reward {
+        max-width: 100px;
+    }
+}
+
 #resultBarsContainer {
     display: flex;
     justify-content: space-around;
