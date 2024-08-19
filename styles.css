@@ -1,22 +1,40 @@
-#resultContainer {
-  margin-top: 20px;
+#resultBarsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%; /* Adjust width to be relative */
+    max-width: 600px; /* Set a maximum width */
+    margin: 20px auto;
 }
 
 .result-bar {
-  height: 50px;
-  margin: 10px 0;
-  line-height: 50px;
-  color: #000000;
-  padding-left: 10px;
-  border-radius: 5px;
-  text-align: center;
-  transition: width 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-weight: bold; /* Bolder points text */
+    width: 100%;
+    height: 25px;
+    background-color: #333;
+    color: black;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
+@media (max-width: 480px) {
+    #resultBarsContainer {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px auto;
+    }
+
+    .result-bar {
+        height: 35px; /* Increase height for better text visibility */
+        line-height: 35px;
+    }
+
+    .result-bar span {
+        font-size: 4vw; /* Make font size relative to viewport width */
+    }
+}
 .result-bar.rich {
   background-color: #CFB53B; /* Old Gold */
 }
@@ -113,16 +131,18 @@ button:hover {
   background-color: #b0d0a0; /* Slightly darker Tea Green */
 }
 
-.rewards-container {
-  text-align: center;
-  margin-top: 20px;
+.reward-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.reward {
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
-  align-self: center;
+.main-reward {
+    width: 100%;
+    max-width: 200px; /* Set a maximum width */
 }
 
 .reward img {
@@ -130,11 +150,11 @@ button:hover {
   height: auto;
 }
 
-.similar-rewards-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+.similar-rewards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .similar-reward img {
@@ -143,11 +163,20 @@ button:hover {
 }
 
 .similar-reward {
-  display: inline-block;
-  text-align: center;
+    width: 30%; /* Adjust width to be relative */
+    max-width: 80px; /* Set a maximum width */
 }
 
+/* Larger main reward */
+@media (max-width: 480px) {
+    .main-reward {
+        max-width: 150px; /* Adjust size for smaller screens */
+    }
 
+    .similar-reward {
+        max-width: 60px; /* Smaller similar rewards */
+    }
+}
 
 .reward h3 {
   margin-top: 10px;
